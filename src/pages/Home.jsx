@@ -1,3 +1,7 @@
+import Navbarcomponent from "../component/Navbarcomponent"
+import Titlecomponent from "../component/Titlecomponent"
+
+
 const mockEmployees = [
   {
     id: 0,
@@ -21,9 +25,12 @@ const mockEmployees = [
 
 const Home = () => {
 
+  const title = 'React - Aessessment'
   return (
     <div>
-        Home
+        <Navbarcomponent/>
+        <Titlecomponent title={title}/>
+       
     </div>
   )
 }
