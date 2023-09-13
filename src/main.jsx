@@ -19,11 +19,11 @@ const router = createBrowserRouter([
     element: <Home />,    
   },
   {
-    path: "/home-user",
+    path: "/homeuser",
     element: <Homeuser />,    
   },
   {
-    path: "/home-admin",
+    path: "/homeadmin",
     element: <Homeadmin />,    
   },
   {
@@ -37,5 +37,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 
-//  https://www.youtube.com/
-//https://www.youtube.com/watch?v=1QYBiNRu1ok&list=RD1QYBiNRu1ok&start_radio=1
