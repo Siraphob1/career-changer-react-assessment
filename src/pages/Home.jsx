@@ -1,5 +1,7 @@
+import { useContext, useEffect } from "react"
 import Navbarcomponent from "../component/Navbarcomponent"
 import Titlecomponent from "../component/Titlecomponent"
+import DataContext from "../Data/DataContext"
 
 
 const mockEmployees = [
@@ -24,10 +26,14 @@ const mockEmployees = [
 ]
 
 const Home = () => {
+  const {members , setMembers} = useContext(DataContext)
+  useEffect(()=>{
+    setMembers(mockEmployees)
+  },[])
 
   const title = 'React - Aessessment'
   return (
-    <div>
+    <div data-theme="light" className=" min-h-screen">
         <Navbarcomponent/>
         <Titlecomponent title={title}/>
        
