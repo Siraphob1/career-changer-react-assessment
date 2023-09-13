@@ -1,11 +1,11 @@
 
-const Tablecomponent = ({members}) => {
+const Tablecomponent = ({members ,deleteMember}) => {
   return (
-    <table className="table w-[900px] border border-black">
+    <table className="table w-[900px]">
     {/* head */}
     <thead>
-      <tr className=" text-center">
-        <th className="font-bold">Name</th>
+      <tr className=" text-center text-[1.3rem] border-b-2 border-gray-300">
+        <th>Name</th>
         <th>LastName</th>
         <th>Position</th>
         <th>Action</th>
@@ -15,7 +15,7 @@ const Tablecomponent = ({members}) => {
      {members.length > 0  && 
       members.map((element)=>{
       return(
-          <tr className=" text-center" key={element.id}>
+          <tr className=" text-center border-b-2 border-gray-300" key={element.id}>
             <td>{element.name}</td>
             <td>{element.lastname}</td>
             <td>{element.position}</td>
