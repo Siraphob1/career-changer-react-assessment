@@ -4,7 +4,7 @@ import { createContext, useState } from "react"
 const DataContext = createContext();
 
 export const DataProvider = ({children}) =>{
-    const [members , setMembers] = useState({});
+    const [members , setMembers] = useState([]);
 
     return(
         <DataContext.Provider value={{members , setMembers}}>
