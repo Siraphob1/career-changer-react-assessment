@@ -11,6 +11,8 @@ import Home from './pages/Home';
 import Homeuser from './pages/Homeuser';
 import Homeadmin from './pages/Homeadmin';
 import Owner from './pages/Owner';
+import { DataProvider } from './Data/DataContext';
+
 
 
 const router = createBrowserRouter([
@@ -33,7 +35,10 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+  <DataProvider>
+    <RouterProvider router={router} />
+  </DataProvider>
+  
 )
 
 
