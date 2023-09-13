@@ -10,14 +10,17 @@ import Tablecomponent from "../component/Homeadmin/Tablecomponent"
 const Homeadmin = () => {
   const title = 'Home - Admin Sector'  
   const {members , setMembers} = useContext(DataContext)
+
   const [membername , setMembername] = useState('')
   const [memberlname , setMemberLname] = useState('')
   const [memberpos , setMemberPos] = useState('')
 
+ 
 
 
+  const addMember = (e) =>{
+    e.preventDefault()
 
-  const addMember = () =>{
     const newmember = {
       id: members.length > 0 ? members.length :1,
       name: membername,
@@ -27,7 +30,9 @@ const Homeadmin = () => {
     
     if(membername && memberlname && memberpos) {
       setMembers((allmembers)=> [...allmembers , newmember])
-      console.log(newmember)
+      setMembername('')
+      setMemberLname('')
+      setMemberPos('')
     }
     else{
       return
@@ -45,17 +50,17 @@ const Homeadmin = () => {
       <Navbarcomponent/>
       <Titlecomponent title={title}/>
       <section className=" px-[3rem] flex flex-col items-center ">
-       <div className="border border-black flex flex-col items-center mt-[2rem]   max-w-[1100px]">
+       <div className="flex flex-col items-center mt-[2rem]   max-w-[1100px]">
           <h2 className="self-start  mb-[1rem]">Create User Here</h2>
-          <form className=" w-full   flex gap-x-[1rem]">
+          <form onSubmit={(e)=> addMember(e)} className=" w-full   flex gap-x-[1rem]">
             <input type="text" placeholder="Name" className="input input-bordered w-full max-w-xs" onChange={(e)=>{setMembername(e.target.value)}} value={membername}/>
             <input type="text" placeholder="LastName" className="input input-bordered w-full max-w-xs" onChange={(e)=>{setMemberLname(e.target.value)}} value={memberlname}/>
             <input type="text" placeholder="Position" className="input input-bordered w-full max-w-xs mr-[2rem]" onChange={(e)=>{setMemberPos(e.target.value)}} value={memberpos}/>
-            <button type='button' className="btn btn-primary" onClick={addMember}>Save</button>
+            <button type="submit" className="btn btn-primary">Save</button>
           </form>
        </div>
-       <div className="overflow-x-auto  mt-[5rem] flex justify-center">
-          <Tablecomponent members={members}/>
+       <div className="overflow-x-auto  mt-[5rem] pb-[5rem] flex justify-center">
+          <Tablecomponent members={members} deleteMember={deleteMember}/>
       </div>
       </section>
     </div>
