@@ -27,16 +27,20 @@ const Homeuser = () => {
             </tr>
           </thead>
           <tbody>
-           {members.length > 0 &&
-           members.map((element)=>{
-            return(
-                <tr className=" text-center border-b-2 border-gray-300 " key={element.id}>
-                  <td className='leading-[49.6px]'>{element.name}</td>
-                  <td>{element.lastname}</td>
-                  <td>{element.position}</td>
+           {members.length > 0 
+            ?  members.map((element)=>{
+              return(
+                  <tr className=" text-center border-b-2 border-gray-300 " key={element.id}>
+                    <td className='leading-[49.6px]'>{element.name}</td>
+                    <td>{element.lastname}</td>
+                    <td>{element.position}</td>
+                </tr>
+              )})
+            : <tr>
+                <td colSpan={3} className=" text-red-600">No members</td>              
               </tr>
-            )
-           })}
+            }
+        
            
            
           </tbody>
