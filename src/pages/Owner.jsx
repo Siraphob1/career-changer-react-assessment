@@ -1,7 +1,11 @@
+import Navbarcomponent from "../component/Navbarcomponent"
+
 
 const Owner = () => {
   return (
-    <div>Owner</div>
+    <div>
+      <Navbarcomponent/>
+    </div>
   )
 }
 
