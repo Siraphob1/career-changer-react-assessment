@@ -71,7 +71,7 @@ const Homeadmin = () => {
       <section className=" px-[3rem] flex flex-col items-center ">
        <div className="flex flex-col items-center mt-[2rem]   max-w-[1100px]">
           <h2 className="self-start  font-bold  mb-[1rem]">Create User Here</h2>
-          <form onSubmit={(e)=> addMember(e)} className=" w-full   flex gap-x-[1rem]">
+          <form onSubmit={(e)=> addMember(e)} className=" w-full   flex flex-col lg:flex-row gap-y-[1rem] lg:gap-y-0 lg:gap-x-[1rem]">
             <input type="text" placeholder="Name" className="input input-bordered w-full max-w-xs" onChange={(e)=>{setMembername(e.target.value)}} value={membername}/>
             <input type="text" placeholder="LastName" className="input input-bordered w-full max-w-xs" onChange={(e)=>{setMemberLname(e.target.value)}} value={memberlname}/>
             <input type="text" placeholder="Position" className="input input-bordered w-full max-w-xs mr-[2rem]" onChange={(e)=>{setMemberPos(e.target.value)}} value={memberpos}/>
@@ -81,7 +81,7 @@ const Homeadmin = () => {
        <div className="overflow-x-auto  mt-[5rem] pb-[5rem] flex justify-center">
           <Tablecomponent members={members} deleteMember={deleteMember}/>          
       </div>
-      <button className="btn btn-neutral text-white px-[2rem] mb-[5rem]" onClick={deleAllMember}>Delete ALL</button>
+      <button className="btn btn-neutral text-white text-[0.7rem] lg:text-[1.3rem] px-[2rem] mb-[5rem]" onClick={deleAllMember}>Delete ALL</button>
       </section>
     </div>
   )
