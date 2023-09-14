@@ -9,8 +9,8 @@ const Titlecomponent = ({title}) => {
           <h2 className=" leading-[2.4rem]">{title}</h2>
        </section>
         <section>
-         <Link to="/homeuser" className="  btn text-[0.78rem] lg:text-[1.1rem] font-semibold normal-case mr-[1rem] w-[150px] lg:w-auto" >User Home Sector</Link>
-         <Link to="/homeadmin" className=" btn text-[0.78rem] lg:text-[1.1rem] font-semibold normal-case w-[150px] lg:w-auto">Admin Home Sector</Link>
+         <Link to="/homeuser" className="  btn text-[0.7rem] lg:text-[1.1rem] font-semibold normal-case mr-[1rem] w-[150px] lg:w-auto" >User Home Sector</Link>
+         <Link to="/homeadmin" className=" btn text-[0.7rem] lg:text-[1.1rem] font-semibold normal-case w-[150px] lg:w-auto">Admin Home Sector</Link>
         </section>
     </section>
   )
