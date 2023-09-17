@@ -21,7 +21,7 @@
 ![Owner](./src/assests/img/Desktop_Owner.png)
 
 
-
+### Library & Framework CSS
 Library: [Vite + React](https://vitejs.dev/)
 
 Framework CSS: [Tailwind](https://tailwindcss.com/) + [daisyUI](https://daisyui.com/)
