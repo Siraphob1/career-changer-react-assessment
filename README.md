@@ -22,3 +22,6 @@
 
 
 
+Library: [Vite + React](https://vitejs.dev/)
+
+Framework CSS: [Tailwind](https://tailwindcss.com/) + [daisyUI](https://daisyui.com/)
